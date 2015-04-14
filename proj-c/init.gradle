@@ -1,0 +1,12 @@
+// rootProject {
+    allprojects {
+        buildscript {
+            repositories {
+                mavenLocal()
+            }
+            dependencies {
+                classpath 'test:plugin-c:1.0'
+            }
+        }
+    }
+// }
