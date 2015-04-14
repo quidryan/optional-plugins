@@ -1,0 +1,25 @@
+buildscript {
+    repositories { jcenter() }
+
+    dependencies {
+        classpath 'com.netflix.nebula:nebula-publishing-plugin:2.2.+'
+        classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:2.2.+'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'nebula-maven-publishing'
+apply plugin: 'resolved-maven'
+apply plugin: 'optional-base'
+
+group = 'test'
+version='1.0'
+
+repositories {
+    mavenLocal()
+}
+
+dependencies {
+    compile gradleApi()
+    compile 'test:plugin-a:1.0', optional
+}
