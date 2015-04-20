@@ -19,6 +19,9 @@ AND the dependency is optional, the build will fail.
     # Dependency added via init script can't see optional dependencies in project's buildscript
     ./gradlew -I init.gradle -b build-init.gradle projects
     
+    # Dependency added via init script and in build.gradle, can't see optional dependencies in project's buildscript
+    ./gradlew -I init.gradle -b build.gradle projects
+    
     cd ../proj-c/
 
     # Dependency added via init script with a non-optional dependency will work!
