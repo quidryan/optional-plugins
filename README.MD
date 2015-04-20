@@ -17,12 +17,12 @@ AND the dependency is optional, the build will fail.
     ./gradlew projects
     
     # Dependency added via init script can't see optional dependencies in project's buildscript
-    ./gradlew -I init.gradle -b build.gradle projects
+    ./gradlew -I init.gradle -b build-init.gradle projects
     
     cd ../proj-c/
 
     # Dependency added via init script with a non-optional dependency will work!
-    ./gradlew -I init.gradle -b build.gradle projects
+    ./gradlew -I init.gradle -b build-init.gradle projects
 
 I contend that it's important for plugins to be able to see other, so that they can interact. It's a powerful technique need for plugins
 to collaborate. E.g. We use information collected in the gradle-info-plugin as a manifest for JARs and DEB files. Another example would

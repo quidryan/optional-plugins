@@ -2,10 +2,10 @@ buildscript {
     repositories { mavenLocal() }
     dependencies {
         classpath 'test:plugin-a:1.0'
-        //classpath 'test:plugin-b:1.0'
+        //classpath 'test:plugin-c:1.0'
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'test.plugin.a'
-apply plugin: 'test.plugin.b'
+apply plugin: 'test.plugin.c'
